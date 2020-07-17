@@ -38,6 +38,11 @@ Route::prefix('v1')->group(function () {
 
             // Logout user from application
             Route::post('logout', 'AuthController@logout');
+
+            // Team members list
+            Route::get('users', 'BookingController@index');
         });
     });
+
+    Route::get('active-events', 'HomeController@index');
 });

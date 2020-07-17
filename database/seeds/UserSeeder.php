@@ -10,10 +10,11 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'Admin',
+                'name' => 'Napoleon B.',
                 'email' => 'admin@admin.com',
                 'password' => '$2y$10$L1Q41dc2cPndrFAXTOAf2uB9HIHUiiUcWQ33wZFquII7oCIXXla5W',
-                'branch_id' => '1',
+                'branch_id' => 1,
+                'role_id' => 1,
                 'remember_token' => null,
                 'created_at' => '2000-01-01 00:00:00',
                 'updated_at' => '2000-01-01 00:00:00',
@@ -28,8 +29,9 @@ class UserSeeder extends Seeder
             DB::table('users')->insert([
                 'name' => $faker->name,
                 'email' => $faker->email,
-                'password' => bcrypt('secret'),
+                'password' => bcrypt('password'),
                 'branch_id' => rand(1, 3),
+                'role_id' => 3,
                 'created_at' => '2000-01-01 00:00:00',
                 'updated_at' => '2000-01-01 00:00:00',
                 'deleted_at' => null,

@@ -15,7 +15,7 @@
     </div>
 </template>
 <script>
-  import userList from '../../components/user-list.vue'
+  import userList from '../../components/UserList.vue'
   export default {
     mounted() {
       //

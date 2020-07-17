@@ -15,7 +15,7 @@ class EventSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        $event_titles = ['Pirmas renginys', 'Antras renginys'];
+        $event_titles = ['Mokymai apie bites', 'Mokymai apie Mėnulį'];
         foreach($event_titles as $title) {
             DB::table('events')->insert([
                 'title' => $title,
@@ -33,7 +33,7 @@ class EventSeeder extends Seeder
             DB::table('locations')->insert([
                 'title' => $location,
                 'address' => $faker->streetAddress,
-                'event_id' => 1,
+                'event_id' => rand(1, 2),
                 'created_at' => '2000-01-01 00:00:00',
                 'updated_at' => '2000-01-01 00:00:00',
                 'deleted_at' => null,

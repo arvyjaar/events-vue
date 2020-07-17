@@ -18,18 +18,19 @@ class RoleSeeder extends Seeder
             ],
             [
                 'id' => 2,
-                'title' => 'Examiner',
+                'title' => 'TeamLead',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'deleted_at' => null,
             ],
             [
                 'id' => 3,
-                'title' => 'ExamTeamLead',
+                'title' => 'User',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'deleted_at' => null,
             ],
+
         ];
 
         DB::table('roles')->insert($roles);

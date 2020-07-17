@@ -51,11 +51,11 @@ class User extends Authenticatable implements JWTSubject
     /**
      * Eager loading
      */
-    protected $with = ['branch'];
+    protected $with = ['branch', 'role'];
 
-    public function roles()
+    public function role()
     {
-        return $this->belongsToMany('App\Models\Role');
+        return $this->belongsTo('App\Models\Role', 'roles', 'id');
     }
 
     public function branch()
